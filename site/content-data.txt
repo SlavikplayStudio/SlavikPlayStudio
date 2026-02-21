@@ -1,0 +1,23 @@
+[PROGRAMS]
+Каталог програм|ChronoBlocks|Аркадна block-game з місіями, шопом, 3D-модом, combo та прогресом.|v1.0.0 Installer|../dist/ChronoBlocks-1.0.0.exe
+Каталог програм|ChronoBlocks|Portable збірка (архів).|Portable ZIP|../dist/ChronoBlocks-portable.zip
+Каталог програм|SManagerCTK|Серія утиліт менеджера плагінів.|SManager.exe|../../../PythonApp/SManagerCTK/dist/SManager.exe
+Каталог програм|SManagerCTK|Серія утиліт менеджера плагінів.|Plugin Creator.exe|../../../PythonApp/SManagerCTK/dist/Plugin%20Creator.exe
+Серія DrAntiVirus|DrAntiVirus|Головна лінійка версій.|v1.0|../../../PythonApp/DrAntiVirus/1.0/DrAntiVirus.exe
+Серія DrAntiVirus|DrAntiVirus|Головна лінійка версій.|v1.1|../../../PythonApp/DrAntiVirus/1.1/dist/DrAntiVirus%201.1.exe
+Серія DrAntiVirus|DrAntiVirus|Головна лінійка версій.|v1.2 BETA|../../../PythonApp/DrAntiVirus/1.2%20BETA/dist/DrAntiVirus%201.2.exe
+Серія DrAntiVirus|DrAntiVirus|Головна лінійка версій.|Launcher 93|../../../PythonApp/DrAntiVirus/DrAntiLauncher%2093.exe
+Серія DrAntiVirus|DrAntiVirusCMD|Консольна серія по версіях.|CMD Launcher|../../../PythonApp/DrAntiVirus/DrAntiVirusCMD/DrAntiLauncher.exe
+Серія DrAntiVirus|DrAntiVirusCMD|Консольна серія по версіях.|CMD v1.0|../../../PythonApp/DrAntiVirus/DrAntiVirusCMD/versions/1.0/run.exe
+Серія DrAntiVirus|DrAntiVirusCMD|Консольна серія по версіях.|CMD v1.1|../../../PythonApp/DrAntiVirus/DrAntiVirusCMD/versions/1.1/run.exe
+Серія DrAntiVirus|DrAntiVirusCMD|Консольна серія по версіях.|CMD v1.2|../../../PythonApp/DrAntiVirus/DrAntiVirusCMD/versions/1.2/run.exe
+
+[NEWS]
+2026-02-21|ChronoBlocks v1.0.0|Зібрано Windows installer, додано магазин, місії, досягнення та покращений HUD.
+2025-10-19|DrAntiVirus 1.2 BETA|Оновлено beta-гілку та додано окремий exe у релізний каталог.
+2025-08-19|DrAntiVirus 1.1|Стабільне оновлення лінійки DrAntiVirus з окремою збіркою.
+
+[CONTACTS]
+telegram|https://t.me/Slavik_play_studio
+discord|https://discord.gg/Y5wvt3aE
+github|https://github.com/SlavikplayStudio
