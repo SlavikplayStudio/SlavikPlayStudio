@@ -106,6 +106,30 @@ h1 {
   vertical-align: middle;
 }
 
+.idea-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.idea-text {
+  color: #cfe2ff;
+  font-size: 13px;
+}
+
+.user-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #4d6e94;
+  background: #253c57;
+  color: #d8ebff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
 ul {
   margin: 0 0 16px;
   padding-left: 18px;

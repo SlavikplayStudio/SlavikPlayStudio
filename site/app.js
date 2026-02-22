@@ -17,6 +17,12 @@
     return withBold.replace(/(^|\s)#([A-Za-z0-9_\u0400-\u04FF-]+)/g, '$1<span class="tag">#$2</span>');
   }
 
+  function normalizeUserTag(value) {
+    const v = String(value || "").trim();
+    if (!v) return "";
+    return v.startsWith("#") ? v : "#" + v;
+  }
+
   function groupPrograms(list) {
     const map = new Map();
     list.forEach((p) => {
@@ -60,6 +66,27 @@
         p.className = "rich-text";
         p.innerHTML = formatRichText(versions[0].description || "");
         card.appendChild(p);
+
+        if (versions[0].idea || versions[0].userTag) {
+          const meta = document.createElement("div");
+          meta.className = "idea-meta";
+
+          if (versions[0].idea) {
+            const idea = document.createElement("span");
+            idea.className = "idea-text";
+            idea.innerHTML = "<strong>User idea:</strong> " + formatRichText(versions[0].idea);
+            meta.appendChild(idea);
+          }
+
+          if (versions[0].userTag) {
+            const user = document.createElement("span");
+            user.className = "user-tag";
+            user.textContent = normalizeUserTag(versions[0].userTag);
+            meta.appendChild(user);
+          }
+
+          card.appendChild(meta);
+        }
 
         const vbox = document.createElement("div");
         vbox.className = "versions";
