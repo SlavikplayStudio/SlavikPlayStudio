@@ -88,6 +88,24 @@ h1 {
   color: var(--muted);
 }
 
+.rich-text strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid #3f6992;
+  background: #1f3550;
+  color: #bde7ff;
+  font-weight: 700;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
 ul {
   margin: 0 0 16px;
   padding-left: 18px;

@@ -1,6 +1,22 @@
 (function () {
   const data = window.SPS_CONTENT || { programs: [], news: [], contacts: {} };
 
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  // Supports **bold** and #tags in descriptions.
+  function formatRichText(value) {
+    const escaped = escapeHtml(value);
+    const withBold = escaped.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    return withBold.replace(/(^|\s)#([A-Za-z0-9_\u0400-\u04FF-]+)/g, '$1<span class="tag">#$2</span>');
+  }
+
   function groupPrograms(list) {
     const map = new Map();
     list.forEach((p) => {
@@ -41,7 +57,8 @@
         card.appendChild(h3);
 
         const p = document.createElement("p");
-        p.textContent = versions[0].description || "";
+        p.className = "rich-text";
+        p.innerHTML = formatRichText(versions[0].description || "");
         card.appendChild(p);
 
         const vbox = document.createElement("div");

@@ -3,7 +3,7 @@
     {
       section: "Program Catalog",
       title: "ChronoBlocks",
-      description: "Arcade block game with missions, shop, 3D mode and combo progression.",
+      description: "**Arcade block game** with missions, shop, 3D mode and combo progression. #java #game",
       versionLabel: "Portable ZIP",
       link: "downloads/ChronoBlocks-portable.zip"
     },
@@ -46,7 +46,7 @@
     {
       section: "DrAntiVirus Series",
       title: "DrAntiVirus",
-      description: "Java edition with Winter UI, improved scan tools and larger hash DB workflow.",
+      description: "**Winter Update** Java edition with improved scan tools and larger hash DB workflow. #security #java #desktop",
       versionLabel: "v1.4 Winter Update Installer",
       link: "downloads/DrAntiVirus-1.4.0-Winter-Update-Installer.exe"
     },
