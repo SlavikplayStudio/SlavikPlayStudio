@@ -27,6 +27,41 @@
     </section>
   </main>
 
+  <button id="idea-fab" class="idea-fab" type="button">Idea / Help</button>
+  <aside id="idea-popup" class="idea-popup" aria-hidden="true">
+    <div class="idea-popup__head">
+      <strong>Send Idea</strong>
+      <button id="idea-close" type="button" class="idea-close" aria-label="Close">x</button>
+    </div>
+    <form id="idea-form" class="idea-form">
+      <label>Request Type
+        <select id="idea-type" required>
+          <option value="Program with program">Program with program</option>
+          <option value="New program idea">New program idea</option>
+        </select>
+      </label>
+      <label>Target Program
+        <input id="idea-program" type="text" placeholder="ChronoBlocks / DrAntiVirus" required>
+      </label>
+      <label>How can you help?
+        <select id="idea-help" required>
+          <option value="coder">coder</option>
+          <option value="designer">designer</option>
+          <option value="tester">tester</option>
+          <option value="idea">idea</option>
+          <option value="other">other</option>
+        </select>
+      </label>
+      <label>User tag (#)
+        <input id="idea-user" type="text" placeholder="#your_tag" required>
+      </label>
+      <label>Message
+        <textarea id="idea-message" rows="4" placeholder="Describe idea/help..." required></textarea>
+      </label>
+      <button class="idea-send" type="submit">Send</button>
+    </form>
+  </aside>
+
   <footer class="footer">
     <div class="footer__top">
       <strong>SlavikPlayStudio</strong>

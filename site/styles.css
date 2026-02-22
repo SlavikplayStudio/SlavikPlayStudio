@@ -261,3 +261,91 @@ ul {
 .contacts a:hover {
   background: #2a4566;
 }
+
+.idea-fab {
+  position: fixed;
+  left: 14px;
+  bottom: 18px;
+  z-index: 30;
+  border: 1px solid #4b7aac;
+  background: linear-gradient(120deg, #1e3550, #2b4b6c);
+  color: #e4f2ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.idea-popup {
+  position: fixed;
+  left: 14px;
+  bottom: 68px;
+  width: min(340px, 90vw);
+  z-index: 31;
+  border: 1px solid #3a5b7f;
+  background: #132338;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .45);
+  transform: translateY(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .18s ease;
+}
+
+.idea-popup.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.idea-popup__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.idea-close {
+  border: 1px solid #49698f;
+  background: #1d334b;
+  color: #cfe6ff;
+  border-radius: 8px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.idea-form {
+  display: grid;
+  gap: 8px;
+}
+
+.idea-form label {
+  display: grid;
+  gap: 5px;
+  color: #bdd2ee;
+  font-size: 12px;
+}
+
+.idea-form input,
+.idea-form select,
+.idea-form textarea {
+  width: 100%;
+  border: 1px solid #3e628a;
+  background: #0f1d2f;
+  color: #e8f2ff;
+  border-radius: 8px;
+  padding: 8px;
+  font: inherit;
+}
+
+.idea-send {
+  border: 1px solid #4f7cad;
+  background: linear-gradient(90deg, #2b4565, #3d6a98);
+  color: #e7f3ff;
+  border-radius: 9px;
+  padding: 9px 10px;
+  font-weight: 700;
+  cursor: pointer;
+}

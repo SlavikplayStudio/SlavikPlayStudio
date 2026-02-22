@@ -147,7 +147,62 @@
     document.getElementById("contact-github").href = data.contacts?.github || "#";
   }
 
+  function setupIdeaPopup() {
+    const fab = document.getElementById("idea-fab");
+    const popup = document.getElementById("idea-popup");
+    const closeBtn = document.getElementById("idea-close");
+    const form = document.getElementById("idea-form");
+    if (!fab || !popup || !closeBtn || !form) return;
+
+    const openPopup = () => {
+      popup.classList.add("open");
+      popup.setAttribute("aria-hidden", "false");
+    };
+    const closePopup = () => {
+      popup.classList.remove("open");
+      popup.setAttribute("aria-hidden", "true");
+    };
+
+    fab.addEventListener("click", () => {
+      if (popup.classList.contains("open")) closePopup();
+      else openPopup();
+    });
+    closeBtn.addEventListener("click", closePopup);
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const type = document.getElementById("idea-type").value.trim();
+      const program = document.getElementById("idea-program").value.trim();
+      const help = document.getElementById("idea-help").value.trim();
+      const user = document.getElementById("idea-user").value.trim();
+      const message = document.getElementById("idea-message").value.trim();
+      if (!type || !program || !help || !user || !message) return;
+
+      const tag = user.startsWith("#") ? user : `#${user}`;
+      const title = `[Idea] ${program} - ${type}`;
+      const body = [
+        "## Idea / Help Request",
+        `- Type: ${type}`,
+        `- Program: ${program}`,
+        `- Role: ${help}`,
+        `- User: ${tag}`,
+        "",
+        "### Message",
+        message,
+        "",
+        "_Created from SlavikPlayStudio website_"
+      ].join("\n");
+
+      const labels = "idea-request,community";
+      const url = `https://github.com/SlavikplayStudio/SlavikPlayStudio/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=${encodeURIComponent(labels)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+      closePopup();
+      form.reset();
+    });
+  }
+
   renderPrograms();
   renderNews();
   renderContacts();
+  setupIdeaPopup();
 })();
