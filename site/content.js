@@ -6,6 +6,7 @@
       description: "**Arcade block game** with missions, shop, 3D mode and combo progression. #java #game",
       idea: "**Enemy Director** mode with local sabotage controls.",
       userTag: "#Slavik_play_studio",
+      userRole: "coder",
       versionLabel: "Portable ZIP",
       link: "downloads/ChronoBlocks-portable.zip"
     },
@@ -51,6 +52,7 @@
       description: "**Winter Update** Java edition with improved scan tools and larger hash DB workflow. #security #java #desktop",
       idea: "Fast updates + clearer download hub on site.",
       userTag: "#SlavikplayStudio",
+      userRole: "designer",
       versionLabel: "v1.4 Winter Update Installer",
       link: "downloads/DrAntiVirus-1.4.0-Winter-Update-Installer.exe"
     },

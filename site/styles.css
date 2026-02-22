@@ -130,6 +130,18 @@ h1 {
   font-size: 12px;
 }
 
+.user-role {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #54795e;
+  background: #233f2f;
+  color: #d4f6dc;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
 ul {
   margin: 0 0 16px;
   padding-left: 18px;

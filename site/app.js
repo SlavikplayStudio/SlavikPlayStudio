@@ -23,6 +23,10 @@
     return v.startsWith("#") ? v : "#" + v;
   }
 
+  function normalizeRole(value) {
+    return String(value || "").trim();
+  }
+
   function groupPrograms(list) {
     const map = new Map();
     list.forEach((p) => {
@@ -67,7 +71,7 @@
         p.innerHTML = formatRichText(versions[0].description || "");
         card.appendChild(p);
 
-        if (versions[0].idea || versions[0].userTag) {
+        if (versions[0].idea || versions[0].userTag || versions[0].userRole) {
           const meta = document.createElement("div");
           meta.className = "idea-meta";
 
@@ -83,6 +87,13 @@
             user.className = "user-tag";
             user.textContent = normalizeUserTag(versions[0].userTag);
             meta.appendChild(user);
+          }
+
+          if (versions[0].userRole) {
+            const role = document.createElement("span");
+            role.className = "user-role";
+            role.textContent = normalizeRole(versions[0].userRole);
+            meta.appendChild(role);
           }
 
           card.appendChild(meta);
